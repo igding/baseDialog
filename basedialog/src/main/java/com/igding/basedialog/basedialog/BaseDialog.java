@@ -16,8 +16,6 @@ import android.view.WindowManager;
 
 import com.igding.basedialog.beandialog.BaseDialogBean;
 
-import org.jetbrains.annotations.Nullable;
-
 /**
  * <pre>
  *     author : handler
@@ -106,7 +104,7 @@ public abstract class BaseDialog extends DialogFragment implements DialogInterfa
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         //在4.0的华为里面，会有标题栏，8.0的华为没有
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         View inflate = inflater.inflate(getLayoutId(), container, false);
