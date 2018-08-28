@@ -20,16 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-# copyright zhonghanwen
-#-------------------------------------------基本不用动区域--------------------------------------------
-#---------------------------------基本指令区----------------------------------
--optimizationpasses 5
--dontskipnonpubliclibraryclassmembers
--printmapping proguardMapping.txt
--optimizations !code/simplification/cast,!field/*,!class/merging/*
--keepattributes *Annotation*,InnerClasses
--keepattributes Signature
--keepattributes SourceFile,LineNumberTable
 #---------------------------------默认保留区---------------------------------
 -keep public class * extends android.app.Activity
 -keep public class * extends android.view.View
