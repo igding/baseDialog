@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 LoginDialogBean loginDialogBean = new LoginDialogBean.Builder()
                         .sure("确定")
                         .cancel("取消")
-                        .w((float) 0.9)
-                        .h((float) 0.3)
+                        .portrait_W((float) 0.9)
+                        .portrait_H((float) 0.3)
                         .tag(DialogConstant.LOGIN)
                         .build();
 
@@ -96,8 +96,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_share:
                 ShareDialogBean shareDialogBean = new ShareDialogBean.Builder()
-                        .h((float) 0.2)
-                        .w(1)
+                        .portrait_W(1)
+                        .portrait_H((float) 0.2)
+                        .landscape_W(1)
+                        .landscape_H((float) 0.2)
                         .tag(DialogConstant.Share)
                         .gravity(Gravity.BOTTOM)
                         .build();

@@ -15,13 +15,24 @@ import android.view.Gravity;
 public class BaseDialogBean {
 
     /**
-     * 宽
+     * 竖屏宽度
      */
-    float w = (float) 0.9;
+    float portrait_W = (float) 0.9;
     /**
-     * 高
+     * 竖屏高度
      */
-    float h = (float) 0.2;
+    float portrait_H = (float) 0.2;
+
+    /**
+     * 竖屏宽度
+     */
+    float landscape_W = (float) 0.9;
+
+    /**
+     * 横屏高度
+     */
+    float landscape_H = (float) 0.5;
+
     /**
      * 从某个方向弹出
      */
@@ -43,27 +54,27 @@ public class BaseDialogBean {
         return this;
     }
 
-    public float getW() {
-        return w;
+    public float getPortrait_W() {
+        return portrait_W;
     }
 
-    public BaseDialogBean setW(float w) {
-        if (w == 0) {
+    public BaseDialogBean setPortrait_W(float portrait_W) {
+        if (portrait_W == 0) {
             return this;
         }
-        this.w = w;
+        this.portrait_W = portrait_W;
         return this;
     }
 
-    public float getH() {
-        return h;
+    public float getPortrait_H() {
+        return portrait_H;
     }
 
-    public BaseDialogBean setH(float h) {
-        if (h == 0) {
+    public BaseDialogBean setPortrait_H(float portrait_H) {
+        if (portrait_H == 0) {
             return this;
         }
-        this.h = h;
+        this.portrait_H = portrait_H;
         return this;
     }
 
@@ -77,5 +88,29 @@ public class BaseDialogBean {
 
     public String getTag() {
         return tag;
+    }
+
+    public float getLandscape_W() {
+        return landscape_W;
+    }
+
+    public BaseDialogBean setLandscape_W(float landscape_W) {
+        if (landscape_W == 0) {
+            return this;
+        }
+        this.landscape_W = landscape_W;
+        return this;
+    }
+
+    public float getLandscape_H() {
+        return landscape_H;
+    }
+
+    public BaseDialogBean setLandscape_H(float landscape_H) {
+        if (landscape_H == 0) {
+            return this;
+        }
+        this.landscape_H = landscape_H;
+        return this;
     }
 }

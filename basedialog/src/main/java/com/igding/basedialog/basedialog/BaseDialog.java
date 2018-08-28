@@ -3,6 +3,7 @@ package com.igding.basedialog.basedialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.content.DialogInterface;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.DisplayMetrics;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+
 import com.igding.basedialog.beandialog.BaseDialogBean;
 
 /**
@@ -83,8 +85,6 @@ public abstract class BaseDialog extends DialogFragment implements DialogInterfa
             return;
         }
 
-        float h = baseDialogBean.getH();
-        float w = baseDialogBean.getW();
         int gravity = baseDialogBean.getGravity();
         Window window = getDialog().getWindow();
         if (window == null) {
@@ -95,15 +95,29 @@ public abstract class BaseDialog extends DialogFragment implements DialogInterfa
         if (getActivity() == null) {
             return;
         }
+        float portrait_h = baseDialogBean.getPortrait_H();
+        float portrait_w = baseDialogBean.getPortrait_W();
+
+        float landscape_h = baseDialogBean.getLandscape_H();
+        float landscape_w = baseDialogBean.getLandscape_W();
+
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-        attributes.width = (int) (dm.widthPixels * w);
-        attributes.height = (int) (dm.heightPixels * h);
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            attributes.width = (int) (dm.widthPixels * landscape_w);
+            attributes.height = (int) (dm.heightPixels * landscape_h);
+            Log.i("info", "landscape"); // 横屏
+        } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+            attributes.width = (int) (dm.widthPixels * portrait_w);
+            attributes.height = (int) (dm.heightPixels * portrait_h);
+            Log.i("info", "portrait"); // 竖屏
+        }
         attributes.gravity = gravity;
         window.setAttributes(attributes);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //在4.0的华为里面，会有标题栏，8.0的华为没有
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         View inflate = inflater.inflate(getLayoutId(), container, false);

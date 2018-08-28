@@ -18,6 +18,7 @@ public class LoginDialogBean extends BaseDialogBean implements Parcelable {
     String sure;
     String cancel;
 
+
     protected LoginDialogBean(Parcel in) {
         sure = in.readString();
         cancel = in.readString();
@@ -35,19 +36,13 @@ public class LoginDialogBean extends BaseDialogBean implements Parcelable {
         }
     };
 
-    public String getSure() {
-        return sure;
-    }
-
-    public String getCancel() {
-        return cancel;
-    }
-
     private LoginDialogBean(Builder builder) {
+        setPortrait_W(builder.portrait_W);
+        setPortrait_H(builder.portrait_H);
         sure = builder.sure;
         cancel = builder.cancel;
-        setW(builder.w);
-        setH(builder.h);
+        setLandscape_W(builder.landscape_W);
+        setLandscape_H(builder.landscape_H);
         setGravity(builder.gravity);
         setTag(builder.tag);
     }
@@ -81,14 +76,26 @@ public class LoginDialogBean extends BaseDialogBean implements Parcelable {
     }
 
     public static final class Builder {
+        private float portrait_W;
+        private float portrait_H;
         private String sure;
         private String cancel;
-        private float w;
-        private float h;
+        private float landscape_W;
+        private float landscape_H;
         private int gravity;
         private String tag;
 
         public Builder() {
+        }
+
+        public Builder portrait_W(float val) {
+            portrait_W = val;
+            return this;
+        }
+
+        public Builder portrait_H(float val) {
+            portrait_H = val;
+            return this;
         }
 
         public Builder sure(String val) {
@@ -101,13 +108,13 @@ public class LoginDialogBean extends BaseDialogBean implements Parcelable {
             return this;
         }
 
-        public Builder w(float val) {
-            w = val;
+        public Builder landscape_W(float val) {
+            landscape_W = val;
             return this;
         }
 
-        public Builder h(float val) {
-            h = val;
+        public Builder landscape_H(float val) {
+            landscape_H = val;
             return this;
         }
 
@@ -124,5 +131,13 @@ public class LoginDialogBean extends BaseDialogBean implements Parcelable {
         public LoginDialogBean build() {
             return new LoginDialogBean(this);
         }
+    }
+
+    public String getSure() {
+        return sure;
+    }
+
+    public String getCancel() {
+        return cancel;
     }
 }
