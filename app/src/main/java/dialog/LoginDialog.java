@@ -35,15 +35,15 @@ public class LoginDialog extends BaseDialog {
         mBtnSure.setText(loginDialogBean.getSure());
         mBtnCancel.setText(loginDialogBean.getCancel());
 
-        EditText mEtAccount = inflate.findViewById(R.id.et_account);
-        EditText mEtPassWord = inflate.findViewById(R.id.et_password);
-
-        final String account = mEtAccount.getText().toString();
-        final String passWord = mEtPassWord.getText().toString();
+        final EditText mEtAccount = inflate.findViewById(R.id.et_account);
+        final EditText mEtPassWord = inflate.findViewById(R.id.et_password);
 
         mBtnSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String account = mEtAccount.getText().toString();
+                String passWord = mEtPassWord.getText().toString();
+
                 mLoginDialogImpl.sure(account, passWord);
                 //也有可能有正则判断什么的，根据自己业务调整即可，
                 if (ViewTool.isEmpty(account)) {

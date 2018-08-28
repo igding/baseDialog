@@ -1,9 +1,7 @@
 package com.ding.basedialog;
 
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -35,14 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("你好呀").setPositiveButton("我不好", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        }).create().show();
-
         Button mBtnDialog = findViewById(R.id.btn_basedialog);
         Button mBtnLogin = findViewById(R.id.btn_login);
         Button mBtnUpdate = findViewById(R.id.btn_share);

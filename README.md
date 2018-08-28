@@ -1,10 +1,13 @@
-# BaseDialog
+# BaseDialogFragment
 
 基于DialogFragment的封装： [（研发中）](https://github.com/igding/baseDialog/tree/master)
 
 ## 引用方式 :
 
-> ** compile 'com.ding:basedialog:1.0.1'
+> **compile 'com.ding:basedialog:1.0.1'
+
+## apk效果图
+![basedialog.gif](https://upload-images.jianshu.io/upload_images/3117705-b649760f1e4da615.gif?imageMogr2/auto-orient/strip)
 
 ## apk下载
 ![](https://upload-images.jianshu.io/upload_images/3117705-b0f639b0e92df3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -13,6 +16,7 @@
 ## 框架思路简介
     常规的dialog和popuwindow的区别和弊端这里不做过多解释
     有兴趣的同学可以在网上找相应资料学习一下。
+  
 ```
 1.本库采用的是Google推荐的dialogFragment实现。
 2.该库最大的特点在于，不会提供任何实现，而是给予一个架构思路。
@@ -95,5 +99,3 @@ newInstance先执行，其次show方法执行完之后，才执行Fragment的生
 
 
 交流群:275885217  入群密码:mvp
-
-

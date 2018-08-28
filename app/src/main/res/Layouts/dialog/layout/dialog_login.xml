@@ -7,13 +7,15 @@
     <EditText
         android:id="@+id/et_account"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="aaaaa" />
 
     <EditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_account" />
+        android:layout_below="@id/et_account"
+        android:text="" />
 
     <Button
         android:id="@+id/btn_sure"
