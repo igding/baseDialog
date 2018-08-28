@@ -4,7 +4,7 @@
 
 ## 引用方式 :
 
-> **compile 'com.ding:basedialog:1.0.1'
+> **compile 'com.ding:basedialog:1.0.2'
 
 ## apk效果图
 ![basedialog.gif](https://upload-images.jianshu.io/upload_images/3117705-6c7b58e951106ff2.gif?imageMogr2/auto-orient/strip)
@@ -35,11 +35,19 @@
     newInstance是Fragment的基本使用方式，不作讲解
 
     设置style: 只能在onstart生命周期进行处理,如有特殊需要，则参考share类
+    
+    竖屏宽度
+    float portrait_W = (float) 0.9;
+    竖屏高度
+    float portrait_H = (float) 0.2;
+    横屏宽度
+    float landscape_W = (float) 0.9;
+    横屏高度
+    float landscape_H = (float) 0.5;
 
-    h:  dialog高度(为了适配，直接设置的屏幕宽高的比例。目前暂时没有考虑横竖屏的情况，之后会加上)
-    w:  dialog宽度
-
-    gravity: dialog弹出方向
+    为了适配，直接设置的屏幕宽高的比例,有设置默认值
+        
+    gravity: dialog弹出方向,默认是center
 
     initView: 初始化布局和查找控件以及设置点击事件
 
