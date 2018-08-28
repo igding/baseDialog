@@ -7,7 +7,7 @@
 > **compile 'com.ding:basedialog:1.0.1'
 
 ## apk效果图
-![baseDialog.gif](https://upload-images.jianshu.io/upload_images/3117705-bfea962d78ca401c.gif?imageMogr2/auto-orient/strip)
+![basedialog.gif](https://upload-images.jianshu.io/upload_images/3117705-6c7b58e951106ff2.gif?imageMogr2/auto-orient/strip)
 
 ## apk下载
 ![](https://upload-images.jianshu.io/upload_images/3117705-b0f639b0e92df3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
