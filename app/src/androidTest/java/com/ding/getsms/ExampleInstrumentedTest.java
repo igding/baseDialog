@@ -1,4 +1,4 @@
-package com.chebei.getsms;
+package com.ding.getsms;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

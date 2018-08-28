@@ -1,4 +1,4 @@
-package com.chebei.getsms;
+package com.ding.getsms;
 
 import org.junit.Test;
 

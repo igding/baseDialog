@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.chebei.getsms.R;
+import com.ding.basedialog.R;
 import com.igding.basedialog.basedialog.BaseDialog;
 
 import dialogbean.LoginDialogBean;

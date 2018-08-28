@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">getSMS</string>
+    <string name="app_name">basedialog</string>
     <string name="rationale_sms">This app needs access to your camera so you can take pictures.</string>
 </resources>

@@ -4,11 +4,10 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
 
-import com.chebei.getsms.R;
+import com.ding.basedialog.R;
 import com.igding.basedialog.basedialog.BaseDialog;
 
 import dialogbean.PositionDialogBean;
-
 
 /**
  * <pre>

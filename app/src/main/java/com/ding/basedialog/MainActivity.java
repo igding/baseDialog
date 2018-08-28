@@ -1,4 +1,4 @@
-package com.chebei.getsms;
+package com.ding.basedialog;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
