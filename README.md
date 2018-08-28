@@ -6,6 +6,10 @@
 
 > ** compile 'com.ding:basedialog:1.0.1'
 
+## apk下载
+![](https://upload-images.jianshu.io/upload_images/3117705-b0f639b0e92df3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 ## 框架思路简介
     常规的dialog和popuwindow的区别和弊端这里不做过多解释
     有兴趣的同学可以在网上找相应资料学习一下。
