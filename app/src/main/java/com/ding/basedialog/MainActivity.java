@@ -125,6 +125,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    public void disMiss() {
+        Toast.makeText(this, "loginDialog消失了呦", 1).show();
+    }
+
+    @Override
     public void shareQQ() {
         Toast.makeText(this, "跳转QQ", 1).show();
     }

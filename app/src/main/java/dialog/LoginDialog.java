@@ -1,5 +1,6 @@
 package dialog;
 
+import android.content.DialogInterface;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
@@ -84,5 +85,13 @@ public class LoginDialog extends BaseDialog {
         void sure(String account, String passWord);
 
         void cance();
+
+        void disMiss();
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        mLoginDialogImpl.disMiss();
     }
 }
